@@ -9,6 +9,11 @@ public class Lab1Recursion {
         // Recursive call: reverse the substring excluding first character
         return reverseString(str.substring(1)) + str.charAt(0);
     }
+    //"abc"
+//    reverseString("abc")
+//    reverseString("bc") +'a'
+//    (reverseString("c")+'b')+'a'
+//    'c'+'b'+'a'
 
     // Recursive method to convert decimal to binary
     public static String toBinary(int n) {
