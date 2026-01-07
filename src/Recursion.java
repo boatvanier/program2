@@ -42,7 +42,7 @@ public class Recursion {
     }
 
     static void listFiles(File file) {
-        if (file.isFile()) {
+        if (file.isFile()) {// base case
             System.out.println(file.getName());
         } else if (file.isDirectory()) {
             System.out.println("Directory: " + file.getName());
@@ -54,5 +54,6 @@ public class Recursion {
             }
         }
     }
+    // Stack + DFS(depth-first search)
 
 }
