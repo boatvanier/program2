@@ -1,3 +1,5 @@
+package recursion;
+
 public class Lab1Recursion {
     // Recursive method to reverse a string
     public static String reverseString(String str) {

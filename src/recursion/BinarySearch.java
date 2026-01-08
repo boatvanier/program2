@@ -1,3 +1,5 @@
+package recursion;
+
 public class BinarySearch {
 
     public static int binarySearch(int[] arr, int target, int left, int right) {

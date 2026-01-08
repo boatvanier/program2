@@ -1,3 +1,5 @@
+package recursion;
+
 public class MergeSort {
 //Divide and conquer => merge sort
 //1 Divide into smaller subproblems => divide the array into two halves
