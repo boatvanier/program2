@@ -1,4 +1,12 @@
+import recursion.Lab2;
+
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import static recursion.Lab2.countOrderedPairs;
+import static recursion.Lab2.longestConsecutiveIncreasing;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -30,12 +38,19 @@ public class Main {
         // Binary Search
 //        int[] numbers = {2, 4, 6, 8, 10, 12, 14};
 //        int target = 16;
-//
 //        int index = recursion.BinarySearch.binarySearch(numbers, target, 0, numbers.length - 1);
-//
 //        System.out.println(index); // Output: 4
 
+//        Lab2
+//        List<Integer> list1 = new ArrayList<>(List.of(1, 2, 2, 3, 4, 1, 2, 3));
+//        System.out.println("Q1: Longest Consecutive Increasing = " + longestConsecutiveIncreasing(list1));
+//
+//        List<Integer> list2 = new ArrayList<>(List.of(2, 1, 3));
+//        System.out.println("Q2: Count of Ordered Pairs = " + countOrderedPairs(list2));
+
         CollectionsExamples.linkedListExample();
+
+
     }
 
 }
