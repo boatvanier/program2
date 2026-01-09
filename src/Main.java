@@ -1,11 +1,5 @@
-import recursion.Lab2;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import static recursion.Lab2.countOrderedPairs;
-import static recursion.Lab2.longestConsecutiveIncreasing;
+import collections.CollectionsExamples;
+import collections.Lab3;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -48,6 +42,7 @@ public class Main {
 //        List<Integer> list2 = new ArrayList<>(List.of(2, 1, 3));
 //        System.out.println("Q2: Count of Ordered Pairs = " + countOrderedPairs(list2));
 
+//        Lab3.lab3();
         CollectionsExamples.linkedListExample();
 
 

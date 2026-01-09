@@ -1,3 +1,5 @@
+package collections;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -49,7 +51,7 @@ public class CollectionsExamples {
         }
     }
 
-    static void linkedListExample(){
+    public static void linkedListExample(){
         List<Integer> numbers = new LinkedList<>();
 
         // add elements
