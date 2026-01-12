@@ -30,7 +30,7 @@ public class Lab3 {
         System.out.println("Contains John? " + friends.contains("John"));
         System.out.println("Final list: " + friends);
 
-        // Q2: LinkedList Queue Simulation
+        // Q2: LinkedList Queue Simulation(FIFO-first in first out)
         List<Integer> queue = new LinkedList<>();
 
         queue.add(101);

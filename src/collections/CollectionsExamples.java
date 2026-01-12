@@ -1,15 +1,10 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class CollectionsExamples {
     // NO GOOD: List<String> list = new List<>();
-
-
-    static void arrayListExample(){
+    public static void arrayListExample(){
         List<String> names = new ArrayList<>();
 
         // add elements
@@ -22,7 +17,13 @@ public class CollectionsExamples {
 
         System.out.println(names);
         // [Alice, Charlie, Bob, Alice]
-
+//        List<String> temps = new ArrayList<>();
+//        temps.add("Alice");
+//        temps.add("Bob");
+//        names.retainAll(temps);
+//
+//        names.remove("Alice");
+//        System.out.println(names);
         // access element
         System.out.println(names.get(0)); // Alice
 
@@ -79,5 +80,101 @@ public class CollectionsExamples {
 
         numbers.addFirst(0);
         System.out.println(numbers);
+    }
+
+    public static void setExample(){
+        Set<String> set = new HashSet<>();
+        set.add("Java");
+        set.add("Python");
+        set.add("Java");   // ignored
+        set.add("C#");
+
+        System.out.println(set);
+        if (set.contains("Java")) {
+            System.out.println("Java exists");
+        }
+
+        set.remove("Python");
+        System.out.println(set.size());
+
+        if (set.isEmpty()) {
+            System.out.println("Set is empty");
+        }
+
+        Iterator<String> it = set.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+
+        Set<Integer> a = new HashSet<>(Set.of(1, 2, 3));
+        Set<Integer> b = new HashSet<>(Set.of(3, 4, 5));
+
+        a.addAll(b); // union
+        System.out.println(a); // [1,2,3,4,5]
+
+        a.retainAll(Set.of(2, 3, 6)); //intersection
+        System.out.println(a); // [2, 3]
+
+        a.removeAll(Set.of(3));
+        System.out.println(a); // [2]
+    }
+
+    public static void mapExample(){
+            // 1. Create a Map (Program to interface)
+            Map<Integer, String> students = new HashMap<>();
+
+            // 2. Add elements (put)
+            students.put(101, "Alice");
+            students.put(102, "Bob");
+            students.put(103, "Charlie");
+            students.put(104, "David");
+
+            // 3. Print Map
+            System.out.println("All students: " + students);
+
+            // 4. Get value by key
+            System.out.println("Student with ID 102: " + students.get(102));
+
+            // 5. Check if key exists
+            System.out.println("Contains key 103? " + students.containsKey(103));
+
+            // 6. Check if value exists
+            System.out.println("Contains value 'Alice'? " + students.containsValue("Alice"));
+
+            // 7. Replace value
+            students.replace(104, "Daniel");
+            System.out.println("After replacing ID 104: " + students);
+
+            // 8. Remove element
+            students.remove(101);
+            System.out.println("After removing ID 101: " + students);
+
+            // 9. Get default value if key not found
+            System.out.println("ID 105: " + students.getOrDefault(105, "Not Found"));
+
+            // 10. Iterate using keySet()
+            System.out.println("\nUsing keySet():");
+            for (Integer id : students.keySet()) {
+                System.out.println(id + " -> " + students.get(id));
+            }
+
+            // 11. Iterate using values()
+            System.out.println("\nUsing values():");
+            for (String name : students.values()) {
+                System.out.println(name);
+            }
+
+            // 12. Iterate using entrySet() (MOST COMMON)
+            System.out.println("\nUsing entrySet():");
+            for (Map.Entry<Integer, String> entry : students.entrySet()) {
+                System.out.println(entry.getKey() + " => " + entry.getValue());
+            }
+
+            // 13. Size of map
+            System.out.println("\nTotal students: " + students.size());
+
+            // 14. Clear map
+            students.clear();
+            System.out.println("Is map empty? " + students.isEmpty());
     }
 }

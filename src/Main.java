@@ -43,7 +43,7 @@ public class Main {
 //        System.out.println("Q2: Count of Ordered Pairs = " + countOrderedPairs(list2));
 
 //        Lab3.lab3();
-        CollectionsExamples.linkedListExample();
+        CollectionsExamples.mapExample();
 
 
     }
