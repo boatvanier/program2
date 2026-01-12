@@ -1,5 +1,6 @@
 import collections.CollectionsExamples;
 import collections.Lab3;
+import collections.Lab4;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -43,7 +44,10 @@ public class Main {
 //        System.out.println("Q2: Count of Ordered Pairs = " + countOrderedPairs(list2));
 
 //        Lab3.lab3();
-        CollectionsExamples.mapExample();
+
+//        CollectionsExamples.mapExample();
+
+        Lab4.lab4();
 
 
     }
