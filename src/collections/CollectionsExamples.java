@@ -177,4 +177,37 @@ public class CollectionsExamples {
             students.clear();
             System.out.println("Is map empty? " + students.isEmpty());
     }
+
+    public static void collectionsMethodExamples() {
+        List<Integer> list = new ArrayList<>();
+        list.add(5);
+        list.add(2);
+        list.add(9);
+        list.add(1);
+        list.add(7);
+
+        System.out.println("Original List: " + list);
+
+        // 1. Collections.sort(list) - Sort in ascending order
+        Collections.sort(list);
+        System.out.println("Sorted List (Ascending): " + list);
+
+        // 2. Collections.reverse(list) - Reverse the order
+        Collections.reverse(list);
+        System.out.println("Reversed List: " + list);
+
+        // 3. Collections.max(list) - Find the maximum value
+        int max = Collections.max(list);
+        System.out.println("Maximum Value: " + max);
+
+        // 4. Collections.min(list) - Find the minimum value
+        int min = Collections.min(list);
+        System.out.println("Minimum Value: " + min);
+
+        // 5. Collections.shuffle(list) - Randomly shuffle the list
+        Collections.shuffle(list);
+        System.out.println("Shuffled List: " + list);
+    }
+
+
 }

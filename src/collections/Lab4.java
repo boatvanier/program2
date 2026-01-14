@@ -167,7 +167,7 @@ public class Lab4 {
 
         System.out.println("Q11 - keySet():");
         for (Integer key : sampleMap.keySet()) {
-            System.out.println(key);
+            System.out.println(key + sampleMap.get(key));
         }
 
         System.out.println("values():");
