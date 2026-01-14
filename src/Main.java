@@ -1,3 +1,4 @@
+import collections.Lab5;
 import collections.StreamLambda;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -47,7 +48,8 @@ public class Main {
 
         //Lab4.lab4();
 
-        StreamLambda.moreExamples();
+//        StreamLambda.moreExamples();
+        Lab5.lab5();
 
 
     }
