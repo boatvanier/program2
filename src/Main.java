@@ -1,5 +1,4 @@
-import collections.Lab5;
-import collections.StreamLambda;
+import oop.Student;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -49,8 +48,17 @@ public class Main {
         //Lab4.lab4();
 
 //        StreamLambda.moreExamples();
-        Lab5.lab5();
+//        Lab5.lab5();
 
+        Student s1 = new Student(); //instantiation
+        Student s2 = new Student("Alice", 20, 90);
+        Student s3 = new Student("Jack");
+
+        s1.setName("Bob");
+        System.out.println(s1.getName());
+        s1.study();
+        s2.study();
+        s2.calculateGpa();
 
     }
 
