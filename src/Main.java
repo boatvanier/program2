@@ -1,3 +1,4 @@
+import oop.Book;
 import oop.Student;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -50,16 +51,16 @@ public class Main {
 //        StreamLambda.moreExamples();
 //        Lab5.lab5();
 
-        Student s1 = new Student(); //instantiation
-        Student s2 = new Student("Alice", 20, 90);
-        Student s3 = new Student("Jack");
 
-        s1.setName("Bob");
-        System.out.println(s1.getName());
-        s1.study();
-        s2.study();
-        s2.calculateGpa();
+        Book b1 = new Book("book1", "author1", "000000000000001", 10);
+        Book b2 = new Book("book2", "author2", "000000000000002", 12);
 
+        b1.setPrice(-1);
+        System.out.println(b1.getPrice());
+        b1.applyDiscount(0.2);
+
+        b1.displayBookInfo();
+        b2.displayBookInfo();
     }
 
 }
