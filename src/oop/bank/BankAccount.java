@@ -1,16 +1,18 @@
-package oop;
+package oop.bank;
 
 public class BankAccount {
     private String accountNumber;
     private String accountName;
     private double balance;
     private boolean active;
+    private static int totalAccounts;
 
     public BankAccount(String accountNumber, String accountName) {
         this.accountNumber = accountNumber;
         this.accountName = accountName;
         this.balance = 0;
         this.active = true;
+        totalAccounts++;
     }
 
     public BankAccount(String accountNumber, String accountName, double initialBalance) {
@@ -23,6 +25,11 @@ public class BankAccount {
         } else {
             this.balance = 0;
         }
+        totalAccounts++;
+    }
+
+    public static int getTotalAccounts() {
+        return totalAccounts;
     }
 
     public String getAccountNumber() {
@@ -39,6 +46,10 @@ public class BankAccount {
 
     public boolean isActive() {
         return active;
+    }
+
+    protected void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public void deposit(double amount) {
