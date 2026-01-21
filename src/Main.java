@@ -1,11 +1,11 @@
 import oop.Book;
-import oop.Student;
+import oop.school.Person;
+import oop.school.Student;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
         // factorial
 //        int result = recursion.Recursion.factorial(5);
 //        System.out.println(result); // Output: 120
@@ -52,15 +52,20 @@ public class Main {
 //        Lab5.lab5();
 
 
-        Book b1 = new Book("book1", "author1", "000000000000001", 10);
-        Book b2 = new Book("book2", "author2", "000000000000002", 12);
+//        Book b1 = new Book("book1", "author1", "000000000000001", 10);
+//        Book b2 = new Book("book2", "author2", "000000000000002", 12);
+//
+//        b1.setPrice(-1);
+//        System.out.println(b1.getPrice());
+//        b1.applyDiscount(0.2);
+//
+//        b1.displayBookInfo();
+//        b2.displayBookInfo();
+//
+//        System.out.println(Book.getBelongsTo()+ " has totally " +Book.getTotalBook() + " books");
 
-        b1.setPrice(-1);
-        System.out.println(b1.getPrice());
-        b1.applyDiscount(0.2);
-
-        b1.displayBookInfo();
-        b2.displayBookInfo();
+        Person s1 = new Student("Alice", 20, 90);
+        s1.introduce();
     }
 
 }

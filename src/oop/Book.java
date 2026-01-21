@@ -6,6 +6,8 @@ public class Book {
     private double price;
     private String isbn;
     private double percent;
+    private static int totalBook;
+    private static String belongsTo = "Vanier College";
 
     public Book(String title, String author, String isbn, double price) {
         this.title = title;
@@ -16,8 +18,15 @@ public class Book {
         } else {
             this.price = 0;
         }
+        totalBook++;
     }
 
+    public static int getTotalBook(){
+        return totalBook;
+    }
+    public static String getBelongsTo() {
+        return belongsTo;
+    }
     public String getTitle() {
         return title;
     }
