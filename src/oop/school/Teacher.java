@@ -2,10 +2,16 @@ package oop.school;
 
 public class Teacher extends Person{
     private double salary;
+    private static int totalTeachers;
 
     public Teacher(String name, int age, double salary) {
         super(name, age);
         this.salary = salary;
+        totalTeachers++;
+    }
+
+    public static int getTotalTeachers(){
+        return totalTeachers;
     }
 
     public double getSalary() {

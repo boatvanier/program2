@@ -1,6 +1,10 @@
 import oop.Book;
 import oop.school.Person;
 import oop.school.Student;
+import oop.school.Teacher;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -64,8 +68,20 @@ public class Main {
 //
 //        System.out.println(Book.getBelongsTo()+ " has totally " +Book.getTotalBook() + " books");
 
+        List<Person> personList = new ArrayList<>();
         Person s1 = new Student("Alice", 20, 90);
-        s1.introduce();
+        personList.add(s1);
+        Person s2 = new Student("Jacky", 21, 80);
+        personList.add(s2);
+        Person t1 = new Teacher("Bob", 40, 1000);
+        personList.add(t1);
+
+        for (Person p : personList) {
+            p.introduce();
+        }
+//        System.out.println("total teachers: " + Teacher.getTotalTeachers());
+//        System.out.println("total students: " + Student.getTotalStudents());
+//        System.out.println("total persons: "+ Person.getTotalPerson());
     }
 
 }
