@@ -56,7 +56,10 @@ public class Main {
 //        Lab5.lab5();
 
 
+        //oop
+
 //        Book b1 = new Book("book1", "author1", "000000000000001", 10);
+//        b1.borrowBook("Alice");
 //        Book b2 = new Book("book2", "author2", "000000000000002", 12);
 //
 //        b1.setPrice(-1);
@@ -69,15 +72,30 @@ public class Main {
 //        System.out.println(Book.getBelongsTo()+ " has totally " +Book.getTotalBook() + " books");
 
         List<Person> personList = new ArrayList<>();
+        Person p1 = new Person("Bob", 25);
+        personList.add(p1);
+        //p1.introduce();
+        //reference type is Student
+        Student s = new Student("Apple", 20, 95);
+        //s.introduce();
+        //reference type is Person
         Person s1 = new Student("Alice", 20, 90);
+//        s1.introduce();
         personList.add(s1);
         Person s2 = new Student("Jacky", 21, 80);
         personList.add(s2);
         Person t1 = new Teacher("Bob", 40, 1000);
+//        t1.introduce();
         personList.add(t1);
 
         for (Person p : personList) {
             p.introduce();
+            if (p instanceof Student) {
+                ((Student) p).study();
+            }
+            if (p instanceof Teacher) {
+                ((Teacher) p).teach();
+            }
         }
 //        System.out.println("total teachers: " + Teacher.getTotalTeachers());
 //        System.out.println("total students: " + Student.getTotalStudents());

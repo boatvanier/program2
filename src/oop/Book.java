@@ -58,4 +58,13 @@ public class Book {
         System.out.println(title+ " " + author + " " + price + " " + percent);
     }
 
+    public void borrowBook() {
+        System.out.println(this.title + " is borrowed");
+    }
+    public void borrowBook(String borrower) {
+        System.out.println(borrower + " borrowed " + this.title);
+    }
+    public void borrowBook(String borrower, int days) {
+        System.out.println(borrower + " borrowed " + this.title + " for " + days + " days.");
+    }
 }
