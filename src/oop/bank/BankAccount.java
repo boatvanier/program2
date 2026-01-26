@@ -1,6 +1,6 @@
 package oop.bank;
 
-public class BankAccount {
+public abstract class BankAccount {
     private String accountNumber;
     private String accountName;
     private double balance;
@@ -58,11 +58,7 @@ public class BankAccount {
         }
     }
 
-    public void withdraw(double amount) {
-        if (active && amount > 0 && this.balance >= amount) {
-            this.balance = this.balance - amount;
-        }
-    }
+    public abstract void withdraw(double amount);
 
     public void closeAccount() {
         this.active = false;

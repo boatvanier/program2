@@ -1,6 +1,6 @@
 package oop.bank;
 
-public class CurrentAccount extends BankAccount {
+public class CurrentAccount extends BankAccount implements Overdraftable {
 
     private double overdraftLimit;
 
@@ -17,5 +17,10 @@ public class CurrentAccount extends BankAccount {
                 getBalance() + overdraftLimit >= amount) {
             setBalance(getBalance() -amount);
         }
+    }
+
+    @Override
+    public boolean allowOverdraft(double amount) {
+        return getBalance() + overdraftLimit >= amount;
     }
 }

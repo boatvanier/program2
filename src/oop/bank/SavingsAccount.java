@@ -1,6 +1,7 @@
 package oop.bank;
 
-public class SavingsAccount extends BankAccount {
+// is - a
+public class SavingsAccount extends BankAccount implements InterestBearing, Overdraftable {
 
     private double interestRate;
 
@@ -10,8 +11,27 @@ public class SavingsAccount extends BankAccount {
         this.interestRate = interestRate;
     }
 
+//    public void addInterest() {
+//        double interest = getBalance() * interestRate / 100;
+//        deposit(interest);
+//    }
+
+    @Override
+    public void withdraw(double amount)
+    {
+        if (isActive() && amount > 0 && getBalance() >= amount) {
+            setBalance(getBalance() - amount);
+        }
+    }
+
+    @Override
     public void addInterest() {
         double interest = getBalance() * interestRate / 100;
         deposit(interest);
+    }
+
+    @Override
+    public boolean allowOverdraft(double amount) {
+        return false;
     }
 }
